@@ -18,20 +18,20 @@
     dest: "~/.tower_cli.cfg"
     mode: 0600
 
-- name: Append file
-  lineinfile:
-    path: /root/license.txt
-    insertbefore: '"company_name.*"'
-    line: '"eula_accepted" : "true",'
+#- name: Append file
+#  lineinfile:
+#    path: /root/license.txt
+#    insertbefore: '"company_name.*"'
+#    line: '"eula_accepted" : "true",'
 
-- name: Add the tower license 
-  command: |
-    tower-cli setting modify LICENSE @/root/license.txt
+#- name: Add the tower license 
+#  command: |
+#    tower-cli setting modify LICENSE @/root/license.txt
 
-- name: Remove License file
-  file:
-   path: /root/license.txt
-   state: absent
+#- name: Remove License file
+#  file:
+#   path: /root/license.txt
+#   state: absent
 
 - name: Generate var file for order_svc.sh script
   template:
