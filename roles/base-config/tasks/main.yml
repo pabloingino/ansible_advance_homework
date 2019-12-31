@@ -25,4 +25,3 @@
   with_items:
     - httpie
     - python-pip
-

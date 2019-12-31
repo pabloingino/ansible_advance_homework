@@ -20,4 +20,3 @@
   service:
     name: "{{ payload }}"
     state: restarted
-
